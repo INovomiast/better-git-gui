@@ -19,7 +19,7 @@ Better Git GUI is a git tool that is very easy to use! Jus't follow the stept's 
 
 Contributions are always welcome!
 
-See `contributing.md` for ways to get started.
+See ![Contribute.md]() for ways to get started.
 
-Please adhere to this project's `code of conduct`.
+Please adhere to this project's ![Code Of Conduct](https://github.com/INovomiast/better-git-gui/blob/main/cofc.md).
 
