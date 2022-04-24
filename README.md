@@ -23,3 +23,8 @@ See ![Contribute.md](https://github.com/INovomiast/better-git-gui/blob/main/cont
 
 Please adhere to this project's ![Code Of Conduct](https://github.com/INovomiast/better-git-gui/blob/main/cofc.md).
 
+## DISCLAIMER!
+
+BetterGitGUI is not related to ![GIT ORGANIZATION](https://github.com/git)!!
+
+It's an entirely solo dev project for helping dev's to encourage to use git in a easy whay! (And it's the best whay to have a better workflow!)
