@@ -1,0 +1,33 @@
+{
+  "name": "better-git-gui",
+  "version": "1.0.0",
+  "description": "A better version of GitGUI created with electron!",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INovomiast/better-git-gui.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "electron",
+    "git",
+    "gui"
+  ],
+  "author": "INovomiast <inovomiast@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/INovomiast/better-git-gui/issues"
+  },
+  "homepage": "https://github.com/INovomiast/better-git-gui#readme",
+  "devDependencies": {
+    "electron": "^18.1.0"
+  },
+  "dependencies": {
+    "socket.io": "^4.5.0"
+  }
+}
