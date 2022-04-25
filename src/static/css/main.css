@@ -23,3 +23,8 @@ body::before {
     width: 450px;
     margin-right: 60px;
 }
+
+#content {
+    text-align: center;
+    transform: translateY(150px);
+}
