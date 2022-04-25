@@ -35,7 +35,7 @@ const gen_uuid = () => {
 const save_uuid = (filename, filecontent) => {
     fs.appendFile(filename, filecontent + '\n', function(err) {
        if (err) {
-           return console.log(err);
+           return console.log(err); //Returns an Error if the
        }  
     });
 }
@@ -48,7 +48,10 @@ function mainWCreate(Wwidth, Wheight, WcontextIsolation) { //This funcion is evo
         height: Wheight, //Set's the height of the MainWindow.
         webPreferences: {
             contextIsolation: WcontextIsolation //Enable's the use of NodeJS outside of the file!
-        }
+        },
+        resizable: false,
+        fullscreenable: false,
+        maximizable: false
     });
     
     mainW.loadURL(url.format({
