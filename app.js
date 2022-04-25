@@ -17,14 +17,28 @@ let mainW; //This let... it's the var where the window data is stored.
 let s_uuid = "" //S_UUID.
 let s_uuid_list = []; //S_UUID_LIST (Here we store all the sessions uuid's).
 
+//Session Manager Date
+var actual_date = new Date()
+var converted_date = actual_date.getFullYear() + '-' + (actual_date.getMonth()+1) + '-' + actual_date.getDate();
+
+//Session Manager Time
+var converted_hour = actual_date.getHours() + ":" + actual_date.getMinutes() + ":" + actual_date.getSeconds();
+
 const gen_uuid = () => {
     s_uuid = session_uuid.randomUUID(); //Generates the UUID
     s_uuid_list.push(s_uuid); //Add's the UUID to the list
     console.log(s_uuid_list); //This show's the session uuid
+    save_uuid('./.cache/sessions.txt', String(s_uuid_list) + " |-| [" + converted_date + "]" + " |-| " + "< " + converted_hour + " >"); //Save's the session UUID in a file on cache dir
 }
 
 //Session Manager (UUID Save)
-fs.writeFile('')
+const save_uuid = (filename, filecontent) => {
+    fs.appendFile(filename, filecontent + '\n', function(err) {
+       if (err) {
+           return console.log(err);
+       }  
+    });
+}
 
 
 function mainWCreate(Wwidth, Wheight, WcontextIsolation) { //This funcion is evoked on line:29.
@@ -46,7 +60,7 @@ function mainWCreate(Wwidth, Wheight, WcontextIsolation) { //This funcion is evo
 
 //Check if is in Dev or Production:
 if(process.env.NODE_ENV === "production") {
-    Menu.setApplicationMenu(null)
+    Menu.setApplicationMenu(null);
 } else if(process.env.NODE_ENV !== "production") {
     
 }
@@ -56,8 +70,3 @@ app.whenReady().then(() => { //Check if app is ready.
     mainWCreate(800, 600, false); //CreateMainWindow Function
     gen_uuid(); //Generates and saves the session_uuid
 });
-
-//Jus't for dev Reasons:
-if(process.env.NODE_ENV !== "production") {
-    console.log(stringify(process.env.NODE_ENV));
-}
